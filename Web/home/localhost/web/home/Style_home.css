@@ -312,27 +312,24 @@ header.sticky{
 .brand{
     padding: 50px 14%;
 }
-.brand-content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px; /* Optional: Adds space between the images */
-}
-
-.brand-content .main {
-    flex: 1 1 100px; /* Adjust the base size of the images */
-    display: flex;
-    justify-content: center;
+.brand-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+    gap: 2rem;
     align-items: center;
-}
+    justify-content: center;
 
-.brand-content .main img {
-    width: 100px;  /* Set width to desired size */
-    height: 100px; /* Set height to desired size */
-    object-fit: cover; /* Ensures the image covers the entire area */
-    border-radius: 50%; /* Makes the image circular */
-    display: block; /* Ensures the image takes up the entire .main div */
 }
-
+.main img{
+    width: 100%;
+    height: auto;
+    opacity: 0.6;
+    transition: all .35s ease;
+    cursor: pointer;
+}
+.main img:hover{
+    opacity: 1;
+}
 
 .contact{
     background: var(--main-color);
